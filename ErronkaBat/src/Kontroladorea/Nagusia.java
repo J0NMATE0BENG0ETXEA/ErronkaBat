@@ -15,18 +15,16 @@ public class Nagusia {
 		printzipala.iniciar();	*/
 		
 
-		Konexioa k = new Konexioa();
-		
-
 		Kontsultak kon = new Kontsultak();
+		kon.insertDepartamentu();
 
-		IrakurriCSV irakurri = new IrakurriCSV();
+		/*IrakurriCSV irakurri = new IrakurriCSV();
 		irakurri.kargatuDepartamentu();
 		ArrayList<Departamentu> depLista = irakurri.getDepLista();
 		
 		for (int i = 0; i < depLista.size(); i++) {
 			kon.insertDepart(depLista.get(i));
-		}
+		}*/
 		
 		
 		
