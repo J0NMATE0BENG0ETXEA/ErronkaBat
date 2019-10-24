@@ -21,7 +21,7 @@ public class Kontsultak {
 	private ResultSet resultado;
 	
 	
-	public String insertDepartamentu() throws ClassNotFoundException {
+	public String insertDepartamentu(Departamentu dep) throws ClassNotFoundException {
 	
 		
 		Connection conexion = null;
@@ -37,10 +37,10 @@ public class Kontsultak {
 			
 			PreparedStatement preparedStatement = (PreparedStatement) conexion.prepareStatement(sql);
 
-			preparedStatement.setInt(1, 02);//kodea ALDATU BEHAR DA 
-			preparedStatement.setString(2, "Informatika"); //DEPARTAMENTU IZENA
-			preparedStatement.setString(3, "kokapena"); //KOKAPENA
-			preparedStatement.setString(4, "Elorrieta"); //DIZENA 
+			preparedStatement.setInt(1, dep.getKODEA());//kodea ALDATU BEHAR DA 
+			preparedStatement.setString(2, dep.getIZENA()); //DEPARTAMENTU IZENA
+			preparedStatement.setString(3, dep.getKOKAPENA()); //KOKAPENA
+			preparedStatement.setString(4, dep.getDIZENA()); //DIZENA 
 
 			preparedStatement.executeUpdate();
 
