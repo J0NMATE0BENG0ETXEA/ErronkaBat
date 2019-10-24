@@ -37,7 +37,7 @@ public class IrakurriXML {
 
 	public static void kargatuDepartamentu() {
         try {
-            File archivo = new File("../home/elorrieta/Escritorio/prueba.xml");
+            File archivo = new File("../ErronkaBat/prueba.xml");
             
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = factory.newDocumentBuilder();
@@ -56,8 +56,7 @@ public class IrakurriXML {
     				aux.sartuDatuak(element.getElementsByTagName("kodea").item(0).getTextContent(), 
     						element.getElementsByTagName("izena").item(0).getTextContent()
     						, element.getElementsByTagName("kokapena").item(0).getTextContent(), 
-    						element.getElementsByTagName("dizena").item(0).getTextContent()); 
-    					
+    						element.getElementsByTagName("dizena").item(0).getTextContent());    			
     				
     				depLista.add(aux);
                 }
