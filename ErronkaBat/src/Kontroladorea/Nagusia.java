@@ -18,20 +18,15 @@ public class Nagusia {
 
 		Kontsultak kon = new Kontsultak();
 		
-		/*IrakurriCSV irakurri = new IrakurriCSV();
-		irakurri.kargatuDepartamentu();
-		ArrayList<Departamentu> depLista = irakurri.getDepLista();
-		
-		for (int i = 0; i < depLista.size() -1; i++) {
-			kon.insertDepartamentu(depLista.get(i));
-		}*/
-		
 		IrakurriXML ira = new IrakurriXML();
 		ira.kargatuDepartamentu();
 		ArrayList<Departamentu> depLista = ira.getDepLista();
-		for (int i = 0; i < depLista.size() -1; i++) {
-			kon.insertDepartamentu(depLista.get(i));
+		for (int i = 0; i < depLista.size(); i++) {
+			kon.insertDepart(depLista.get(i));
 		}
+		
+		//kon.insertDepart(depLista.get(0));
+		
 		
 	}
 

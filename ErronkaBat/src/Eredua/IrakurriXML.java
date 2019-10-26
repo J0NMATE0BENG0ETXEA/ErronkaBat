@@ -1,6 +1,8 @@
 package Eredua;
 import java.awt.List;
 import java.io.BufferedReader;
+
+import javax.swing.JFileChooser;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -27,18 +29,24 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class IrakurriXML {
-	private File file;
-	private FileReader fr;
-	private BufferedReader br;
 	private static ArrayList<Departamentu> depLista = new ArrayList<Departamentu>();
 
 	public IrakurriXML() {
 	}
 
 	public static void kargatuDepartamentu() {
-        try {
-            File archivo = new File("../ErronkaBat/prueba.xml");
-            
+    	 //Creamos el objeto JFileChooser
+    	   JFileChooser fc=new JFileChooser();
+    	    
+    	   //Abrimos la ventana, guardamos la opcion seleccionada por el usuario
+    	   int seleccion=fc.showOpenDialog(fc);
+    	    
+    	   //Si el usuario, pincha en aceptar
+    	   if(seleccion==JFileChooser.APPROVE_OPTION)  	{ 			
+		
+		try {
+            //File archivo = new File("../ErronkaCasa/prueba.xml");
+			File archivo = fc.getSelectedFile();
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = factory.newDocumentBuilder();
             Document document = documentBuilder.parse(archivo);
@@ -65,6 +73,7 @@ public class IrakurriXML {
         } catch(Exception e) {
             e.printStackTrace();
         }
+      }
     }
 
 	public static ArrayList<Departamentu> getDepLista() {

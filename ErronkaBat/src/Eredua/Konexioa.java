@@ -6,7 +6,7 @@ public class Konexioa {
 	
 	private String usuario = "root";
 	private String pwd = "";
-	private static String bd = "ERRONKA1";
+	private static String bd = "erronka1";
 	private String url = "jdbc:mysql://localhost/" + bd;
 	private Connection konx = null;
 	
