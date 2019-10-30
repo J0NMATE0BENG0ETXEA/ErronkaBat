@@ -82,10 +82,14 @@ public class Emplegatu {
 		BETEBEHARRA = bETEBEHARRA;
 	}
 	
-	public void sartuDatuak(int eKODEA, int dKODEA, String iZENA, String aBIZENA, String dATA, String oRDUA,
-			String bETEBEHARRA) {
-		EKODEA = eKODEA;
-		DKODEA = dKODEA;
+	public void sartuDatuak(String ekodea, String dkodea, String iZENA, String aBIZENA, String dATA, String oRDUA,
+							String bETEBEHARRA) {
+		
+		int i = Integer.parseInt(ekodea);
+		int j = Integer.parseInt(dkodea);
+		
+		EKODEA = i;
+		DKODEA = j;
 		IZENA = iZENA;
 		ABIZENA = aBIZENA;
 		DATA = dATA;
